@@ -1,6 +1,6 @@
 import React from 'react'
 
-const RoundedCorner = () => {
+const RoundedCorner:React.FC = () => {
   return (
     <svg
     className="invisible absolute size-0"

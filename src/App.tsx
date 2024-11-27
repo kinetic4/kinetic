@@ -8,7 +8,7 @@ import { Timeline } from './components/Timeline'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
-const App = () => {
+const App:React.FC = () => {
   return (
     <main className='relative min-h-screen w-screen overflow-x-hidden'>
       <Navbar />

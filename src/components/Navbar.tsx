@@ -6,7 +6,7 @@ import gsap from "gsap";
 
 const navItems = ['Nexus ↘', 'Vault ↘', 'Prolouge', 'About', 'Contact']
 
-const Navbar = () => {
+const Navbar:React.FC = () => {
   const [isAudioPlaying, setIsAudioPlaying] = useState(false)
   const [isIndicatorActive, setIndicatorActive] = useState(false)
   const [LastScrollY, setLastScrollY] = useState(0)
@@ -14,8 +14,8 @@ const Navbar = () => {
 
   const { y: currentScrollY } = useWindowScroll()
   
-  const navContainerRef = useRef(null);
-  const audioElementRef = useRef(null)
+  const navContainerRef = useRef<HTMLDivElement>(null);
+  const audioElementRef = useRef<HTMLVideoElement | null>(null)
 
   const toggleAudioIndicator = () => {
     setIsAudioPlaying((prev) => !prev);
@@ -23,23 +23,25 @@ const Navbar = () => {
   }
 
   useEffect(() => {
-    if(isAudioPlaying) {
+    if(isAudioPlaying && audioElementRef.current) {
         audioElementRef.current.play()
-    } else {
+    } else if (audioElementRef.current) {
         audioElementRef.current.pause()
     }
   }, [isAudioPlaying])
 
   useEffect(() => {
-    if(currentScrollY === 0) {
-        setisNavVisible(true)
-        navContainerRef.current.classList.remove('floating-nav')
-    } else if (currentScrollY > LastScrollY) {
-        setisNavVisible(false)
-        navContainerRef.current.classList.add('floating-nav')
-    } else if (currentScrollY < LastScrollY) {
-        setisNavVisible(true)
-        navContainerRef.current.classList.add('floating-nav')
+    if(navContainerRef.current) {
+      if(currentScrollY === 0) {
+          setisNavVisible(true)
+          navContainerRef.current.classList.remove('floating-nav')
+      } else if (currentScrollY > LastScrollY) {
+          setisNavVisible(false)
+          navContainerRef.current.classList.add('floating-nav')
+      } else if (currentScrollY < LastScrollY) {
+          setisNavVisible(true)
+          navContainerRef.current.classList.add('floating-nav')
+      }
     }
     setLastScrollY(currentScrollY)
   }, [currentScrollY, LastScrollY])

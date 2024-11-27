@@ -5,7 +5,7 @@ interface imageClipBox {
     clipClass: string
 }
 
-const ImageClipBox = ({src, clipClass} : imageClipBox) => {
+const ImageClipBox: React.FC<imageClipBox> = ({src, clipClass}) => {
    return (
     <div  className={clipClass}>
     <img src={src}  />

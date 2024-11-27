@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 import ImageClipBox from './ImageClip'
 import AnimatedTitle from './AnimatedTitle'
 import Button from './Button'
 
 
 
-const Contact = () => {
+const Contact: React.FC = () => {
   return (
     <div id='contact' className='my-20 min-h-96 w-screen px-10'>
         <div className='relative rounded-lg  bg-black py-24 text-blue-50 md:overflow-hidden'>

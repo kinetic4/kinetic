@@ -13,7 +13,7 @@ const itemRef = useRef<HTMLDivElement>(null)
 const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
   if(!itemRef.current) return;
 
-  const {top, left, width, height} = itemRef.current.getBoundingClientRect();
+  const {top, left, width } = itemRef.current.getBoundingClientRect();
 
   const relativeX = (e.clientX - left) / width;
   const relativeY = (e.clientY - top) / width

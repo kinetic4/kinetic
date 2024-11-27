@@ -1,4 +1,4 @@
-import { IconBrandDiscord, IconBrandGithub, IconBrandInstagram, IconBrandTwitch, IconBrandTwitter, TablerIcon } from '@tabler/icons-react'
+import { IconBrandDiscord, IconBrandGithub, IconBrandTwitch, IconBrandTwitter, TablerIcon } from '@tabler/icons-react'
 import React from 'react'
 
 
@@ -7,9 +7,9 @@ import React from 'react'
         icon: TablerIcon
     }
     
-const Footer = () => {
+const Footer: React.FC = () => {
     const Link: links[] = [
-        { href: 'https://discord.com', icon: IconBrandDiscord},
+        { href: 'https://discord.com', icon: IconBrandDiscord,},
         { href: 'https://twitter.com', icon: IconBrandTwitter},
         { href: 'https://github.com', icon: IconBrandGithub},
         { href: 'https://twitch.com', icon: IconBrandTwitch},
@@ -22,9 +22,9 @@ const Footer = () => {
                 &copy; 2024 Kinetic. All rights reserved 
             </p>
             <div className='flex justify-center gap-4 md:justify-start'>
-                {Link.map((item) => (
+                {Link.map((item, index) => (
                     <a
-                    key={item}
+                    key={index}
                     href={item.href}
                     target='_blank'
                     rel='noopener noreferrer'

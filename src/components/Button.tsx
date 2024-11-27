@@ -9,7 +9,7 @@ type Props = {
     containerClass?: string
 }
 
-const Button = ({id, title, rightIcon:RightIcon, leftIcon:LeftIcon, containerClass} : Props) => {
+const Button:React.FC<Props> = ({id, title, rightIcon:RightIcon, leftIcon:LeftIcon, containerClass}) => {
   return (
     <button
     id={id}

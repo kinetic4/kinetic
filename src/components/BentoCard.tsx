@@ -1,4 +1,4 @@
-import { IconArrowRight, IconArrowUpRight, TablerIcon } from '@tabler/icons-react'
+import {  IconArrowUpRight, TablerIcon } from '@tabler/icons-react'
 import React from 'react'
 
 interface Bentocard {

@@ -17,7 +17,7 @@ const Hero = () => {
   const totalVideos = 4;
 
 
-  const nextVidRef = useRef(null)
+  const nextVidRef = useRef<HTMLVideoElement | null>(null)
 
 
   const handleVideoLoad = () => {
@@ -49,7 +49,11 @@ const Hero = () => {
         height: '111%',
         duration: 1,
         ease: 'power1.InOut',
-        onStart: () => nextVidRef.current.play(),
+        onStart: () => {
+          if(nextVidRef.current) {
+             nextVidRef.current.play()
+          }
+        }
       })
       gsap.from('#current-video', {
         transformOrigin: 'center center',

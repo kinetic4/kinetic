@@ -3,7 +3,7 @@ import {
   useScroll,
   useTransform,
   motion,
-  MotionValue,
+
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import AnimatedTitle from "../AnimatedTitle";

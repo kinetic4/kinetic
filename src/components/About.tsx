@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/all'
 import React from 'react'
 import AnimatedTitle from './AnimatedTitle'
 
-const About = () => {
+const About: React.FC = () => {
 
     gsap.registerPlugin(ScrollTrigger)
 

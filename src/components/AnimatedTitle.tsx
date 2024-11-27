@@ -9,7 +9,7 @@ interface animatedTitle {
   sectionId?: string
 }
 
-const AnimatedTitle = ({ title, containerClass, sectionId }: animatedTitle ) => {
+const AnimatedTitle:React.FC<animatedTitle> = ({ title, containerClass, sectionId }) => {
 
   gsap.registerPlugin(ScrollTrigger)
 

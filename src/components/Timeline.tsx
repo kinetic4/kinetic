@@ -1,4 +1,3 @@
-import React from "react";
 import { TimelineUi } from "./ui/Timeline";
 
 export function Timeline() {

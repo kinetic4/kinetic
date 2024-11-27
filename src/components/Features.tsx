@@ -1,11 +1,11 @@
-import React, { useRef, useState } from 'react'
+import React from 'react'
 import BentoCard from './BentoCard'
-import { IconArrowsDiagonal, IconArrowWaveRightUp } from "@tabler/icons-react";
+import { IconArrowsDiagonal } from "@tabler/icons-react";
 import BentoTilt from './BentoTilti';
 
 
 
-const Features = () => {
+const Features:React.FC = () => {
 
 
   return (
