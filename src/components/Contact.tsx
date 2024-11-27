@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import ImageClipBox from './ImageClip'
 import AnimatedTitle from './AnimatedTitle'
 import Button from './Button'
@@ -19,10 +19,12 @@ const Contact = () => {
                </div>
                <div className='flex flex-col text-center items-center'>
                 <p className='font-general text-[10px] uppercase'>Join To kinetic</p>
-               <p  className='special-font mt-10 w-full font-zentry text-5xl leading-[0.9] md:text-[6rem] uppercase'>
-               let’s b<b>u</b>ild the <br/> new era of <br/> g<b>a</b>ming t<b>o</b>gether.
-               </p>
+               <AnimatedTitle  
+               containerClass='mt-10 w-full font-zentry text-5xl leading-[0.9] md:text-[6rem] uppercase' 
+               title=' let’s b<b>u</b>ild the <br/> new era of <br/> g<b>a</b>ming t<b>o</b>gether.' />
+               <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pratyushbhargava6@gmail.com" target='_blank' rel='noopener noreferrer'>
                <Button title='Contact' containerClass='mt-10 cursor-pointer'/>
+               </a>
                </div>
             </div>
         </div>
