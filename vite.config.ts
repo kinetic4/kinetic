@@ -11,4 +11,7 @@ export default defineConfig({
   build: {
     target: 'esnext',
   },
+  optimizeDeps: {
+    exclude: ['@gsap/react', 'gsap', 'gsap_all'], // Exclude GSAP dependencies
+  },
 })
