@@ -1,10 +1,8 @@
-# Use an official Node runtime as the base image
 FROM node:18-alpine
 
-# Set working directory in the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json
+# Copy only package files first to leverage docker cache
 COPY package*.json ./
 
 # Install dependencies
@@ -16,7 +14,7 @@ COPY . .
 # Build the application
 RUN npm run build
 
-# Expose the port (Railway will override this with $PORT)
+# Expose the port (Railway will override this)
 EXPOSE 3000
 
 # Command to run the application
