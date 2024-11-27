@@ -2,20 +2,20 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-# Copy only package files first to leverage docker cache
+# Copy package files
 COPY package*.json ./
 
 # Install dependencies
 RUN npm install
 
-# Copy the rest of the application code
+# Copy entire project
 COPY . .
 
-# Build the application
+# Build the project
 RUN npm run build
 
-# Expose the port (Railway will override this)
+# Expose port
 EXPOSE 3000
 
-# Command to run the application
+# Start command
 CMD ["npm", "start"]
