@@ -8,4 +8,7 @@ export default defineConfig({
     port: 5173, // Ensure the port is correctly set
   },
   plugins: [react()],
+  build: {
+    target: 'esnext',
+  },
 })
