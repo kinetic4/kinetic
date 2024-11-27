@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Expose the port (Railway will override this with $PORT)
-EXPOSE 4173
+EXPOSE 3000
 
 # Command to run the application
 CMD ["npm", "start"]
