@@ -12,6 +12,6 @@ export default defineConfig({
     target: 'esnext',
   },
   optimizeDeps: {
-    exclude: ['@gsap_react']
+    exclude: ['gsap', '@gsap_react']
   }
 })
