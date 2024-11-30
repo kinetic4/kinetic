@@ -29,7 +29,7 @@ export const TimelineUi = ({ data }: { data: TimelineEntry[] }) => {
       const rect = ref.current.getBoundingClientRect();
       setHeight(rect.height);
     }
-  }, [ref]);
+  }, [ref, height]);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
