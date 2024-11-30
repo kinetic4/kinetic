@@ -1,6 +1,6 @@
 import React from 'react'
 import BentoCard from './BentoCard'
-import { IconArrowsDiagonal } from "@tabler/icons-react";
+import { IconArrowsDiagonal, IconArrowUpRight } from "@tabler/icons-react";
 import BentoTilt from './BentoTilti';
 
 
@@ -40,6 +40,10 @@ const Features:React.FC = () => {
             title={<>N<b>e</b>xus</>}
             description='A gamified social hub, adding a new dimension of play to your identity, Web3 engagement and social interaction'
             isComingSoon={true}
+            button={true}
+            title2='Launch site'
+            buttonIcon={IconArrowUpRight}
+            buttonPosition='left'
             />
           </BentoTilt>
           <BentoTilt className='bento-tilt_1 row-span-1 me-14 md:col-span-1 md:me-0'>
