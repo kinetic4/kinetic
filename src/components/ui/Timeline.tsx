@@ -10,7 +10,7 @@ import React, { useEffect, useRef, useState } from "react";
 import AnimatedTitle from "../AnimatedTitle";
 import Button from "../Button";
 import { cn } from "../../lib/util";
-import { DotLottie, DotLottieReact } from "@lottiefiles/dotlottie-react";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 interface TimelineEntry {
   title: string;
@@ -73,8 +73,6 @@ export const TimelineUi = ({ data }: { data: TimelineEntry[] }) => {
     return () => unsubscribe();
   }, [scrollYProgress, data]);
 
-  const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
-  const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
     <motion.div
